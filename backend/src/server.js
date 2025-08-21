@@ -1,22 +1,33 @@
+import "../instrument.mjs"
 import express from "express";
 import { ENV } from "./config/env.js";
 import { connectDB } from "./config/db.js";
 import { clerkMiddleware } from "@clerk/express";
 import { functions, inngest } from "./config/inngest.js";
 import {serve} from "inngest/express";
+import chatRoutes from "./routes/chat.route.js";
+import * as Sentry from "@sentry/node";
 
 const app = express();
 const PORT = ENV.PORT || 3000;
 
 app.use(express.json());
-app.use(clerkMiddleware());
+app.use(clerkMiddleware()); // req.auth will be available in req object
 
-app.use("/api/inngest", serve({client: inngest, functions}))
+Sentry.setupExpressErrorHandler(app);
 
+app.get("/debug-sentry", (req, res) => {
+  throw new Error("This is a test error");
+});
 
 app.get("/", (req, res) => {
   res.send("Hello World 123");
 });
+
+
+app.use("/api/inngest", serve({client: inngest, functions}))
+app.use("/api/chat", chatRoutes)
+
 
 const startServer = async() => {
   try {

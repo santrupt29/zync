@@ -28,3 +28,14 @@ export const deleteStreamUser = async (user) => {
     console.log("Error deleting stream user:", error)
   }
 }
+
+export const generateStreamToken = async (userId) => {
+  try {
+    const userIdString = userId.toString()
+    return streamChat.createToken(userIdString)
+    // console.log("Stream token generated successfully:", token)
+  } catch (error) {
+    console.log("Error generating stream token:", error)
+    return null
+  }
+}
