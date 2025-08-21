@@ -14,7 +14,7 @@ const syncUser = inngest.createFunction(
         const {id, email_addresses, first_name, last_name} = event.data.object;
         const user = await User.findOne({clerkId: id});
         if(!user){
-            const newUser = new User({clerkId: id, email: email_addresses[0].email_address, name:`${first_name || ""} ${last_name || ""}`, image : image_url});
+            const newUser = new User({clerkId: id, email: email_addresses[0], name:`${first_name || ""} ${last_name || ""}`, image : image_url});
             await newUser.save();
         }
     }
