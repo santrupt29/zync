@@ -1,6 +1,6 @@
 import { createContext, useEffect } from "react";
 import { useAuth } from "@clerk/clerk-react";
-import { axiosInstance } from "../../lib/axios.js";
+import { axiosInstance } from "../lib/axios.js";
 import toast from "react-hot-toast";
 import React from "react";
 const AuthContext = createContext();

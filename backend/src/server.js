@@ -8,7 +8,10 @@ import {serve} from "inngest/express";
 import chatRoutes from "./routes/chat.route.js";
 import * as Sentry from "@sentry/node";
 
+import cors from "cors";
+
 const app = express();
+app.use(cors({ origin: ENV.CLIENT_URL, credentials: true }));
 const PORT = ENV.PORT || 3000;
 
 app.use(express.json());
