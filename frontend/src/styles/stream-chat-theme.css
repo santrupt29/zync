@@ -970,6 +970,7 @@
 
   .chat-container {
     height: calc(100vh - 2rem);
+    /* height: 100vh; */
     border-radius: 1rem;
   }
 
@@ -1000,7 +1001,7 @@
 }
 
 @media (max-width: 640px) {
-  .chat-wrapper {
+  /* .chat-wrapper {
     padding: 0.5rem;
   }
 
@@ -1012,12 +1013,20 @@
 
   .str-chat__channel-list {
     width: 100%;
-    height: 200px;
+    height: 500px;
     border-right: none;
     border-bottom: 1px solid rgba(116, 58, 213, 0.3);
   }
 
   .chat-main {
     border-radius: 0 0 0.75rem 0.75rem;
-  }
+  } */
+   .str-chat__channel-list{
+    width: 230px;
+    border-right: none;
+    border-bottom: 1px solid rgba(116, 58, 213, 0.3);
+   }
+   .chat-main {
+    border-radius: 0 0 0.75rem 0.75rem;
+  } 
 }
