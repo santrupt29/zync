@@ -80,7 +80,8 @@ const LandingPage = () => {
       <Navbar />
 
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-gray-900 via-purple-900 to-violet-900 text-white pt-32 pb-20 relative overflow-hidden">
+      <section className="bg-gradient-to-br from-gray-900 via-gray-800 to-amber-900
+ text-white pt-32 pb-20 relative overflow-hidden">
         {/* Background Pattern */}
         <div className="absolute inset-0 opacity-20">
           <div className="absolute top-20 left-20 w-2 h-2 bg-purple-400 rounded-full opacity-40"></div>
@@ -91,9 +92,9 @@ const LandingPage = () => {
         <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-16 items-center px-8 relative z-10">
           <div className={`transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`}>
             {/* Badge */}
-            <div className="inline-block bg-gray-800/50 backdrop-blur-md px-4 py-2 rounded-full text-sm mb-6 border border-gray-700">
+            {/* <div className="inline-block bg-gray-800/50 backdrop-blur-md px-4 py-2 rounded-full text-sm mb-6 border border-gray-700">
               <span>✨ New: AI-powered message suggestions</span>
-            </div>
+            </div> */}
 
             {/* Main Title */}
             <h1 className="text-6xl md:text-7xl font-black leading-tight mb-6">
@@ -197,7 +198,8 @@ const LandingPage = () => {
       </section>
 
       {/* Stats Section */}
-      <section className="bg-gray-800 py-16 border-b border-gray-700">
+      <section className="bg-gray-800 py-16 border-b bg-gradient-to-br from-gray-900 via-teal-900 to-emerald-900
+">
         <div className="max-w-6xl mx-auto px-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             {stats.map((stat, index) => (
@@ -213,7 +215,7 @@ const LandingPage = () => {
       </section>
 
       {/* Features Section */}
-      <section id="features" className="py-24 bg-gray-900">
+      <section id="features" className="py-24 bg-gradient-to-br from-gray-900 via-stone-800 to-red-900">
         <div className="max-w-6xl mx-auto px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
@@ -237,7 +239,8 @@ const LandingPage = () => {
       </section>
 
       {/* Testimonials Section */}
-      <section id="testimonials" className="py-24 bg-gray-800">
+      <section id="testimonials" className="py-24 bg-gradient-to-br from-gray-900 via-slate-700 to-gray-600
+">
         <div className="max-w-6xl mx-auto px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
