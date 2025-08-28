@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useChatContext } from "stream-chat-react";
 import { XIcon } from "lucide-react";
+import React from "react";
 
 const InviteModal = ({ channel, onClose }) => {
   const { client } = useChatContext();
