@@ -1,8 +1,7 @@
 import { Inngest } from "inngest";
 import { connectDB } from "./db.js";
 import { User } from "../models/user.model.js";
-import { deleteStreamUser } from "./stream.js";
-import { upsertStreamUser } from "./stream.js";
+import { deleteStreamUser, upsertStreamUser, addUserToPublicChannels } from "./stream.js";
 
 export const inngest = new Inngest({
   id: "zync",
