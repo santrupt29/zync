@@ -6,6 +6,7 @@ import AuthPage from './pages/AuthPage.jsx'
 import toast from 'react-hot-toast'
 import * as Sentry from "@sentry/react";
 import CallPage from './pages/CallPage.jsx'
+import LandingPage from './pages/LandingPage.jsx'
 
 const SentryRoutes = Sentry.withSentryReactRouterV7Routing(Routes);
 
@@ -16,7 +17,8 @@ const App = () => {
   return (
     <>
       <SentryRoutes>
-      <Route path="/" element={isSignedIn ? <HomePage /> : <Navigate to={"/auth"} replace />} />
+      {/* <Route path="/" element={isSignedIn ? <HomePage /> : <Navigate to={"/auth"} replace />} /> */}
+      <Route path="/" element={isSignedIn ? <HomePage /> : <LandingPage />} />
       <Route path="/auth" element={!isSignedIn ? <AuthPage /> : <Navigate to={"/"} replace />} />
 
       <Route
