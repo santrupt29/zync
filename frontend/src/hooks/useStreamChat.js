@@ -10,6 +10,10 @@ const STREAM_API_KEY = import.meta.env.VITE_STREAM_API_KEY;
 export const useStreamChat = () => {
     const { user } = useUser();
     const [chatClient, setChatClient] = useState(null);
+
+    // console.log('User:', user);
+    // console.log('User ID:', user?.id);
+    // console.log('API Key:', STREAM_API_KEY);
   
     // fetch stream token using react-query
     const {
@@ -21,6 +25,11 @@ export const useStreamChat = () => {
       queryFn: getStreamToken,
       enabled: !!user?.id, // this will take the object and convert it to a boolean
     });
+
+    // console.log('Token Data:', tokenData);
+    // console.log('Token Loading:', isLoading);
+    // console.log('Token Error:', error);
+
   
     // init stream chat client
     // init stream chat client

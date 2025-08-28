@@ -2,7 +2,7 @@ import { UserButton } from "@clerk/clerk-react";
 import React,{ useEffect, useState } from "react";
 import { useSearchParams } from "react-router";
 import { useStreamChat } from "../hooks/useStreamChat.js";
-import PageLoader from "../components/PageLoader";
+import PageLoader from "../components/PageLoader.jsx";
 
 import {
   Chat,
@@ -27,7 +27,6 @@ const HomePage = () => {
   const [searchParams, setSearchParams] = useSearchParams();
 
   const { chatClient, error, isLoading } = useStreamChat();
-
   // set active channel from URL params
   useEffect(() => {
     if (chatClient) {
@@ -53,7 +52,7 @@ const HomePage = () => {
               {/* HEADER */}
               <div className="team-channel-list__header gap-4">
                 <div className="brand-container">
-                  <img src="/logo.png" alt="Logo" className="brand-logo" />
+                  <img src="/Zync2.png" alt="Logo" className="brand-logo" />
                   <span className="brand-name">Slap</span>
                 </div>
                 <div className="user-button-wrapper">
