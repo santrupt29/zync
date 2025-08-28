@@ -1,5 +1,6 @@
 import "../styles/auth.css";
 import { SignInButton } from "@clerk/clerk-react";
+import React from "react";
 
 const AuthPage = () => {
   return (
